@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animals</title>
+</head>
+<body>
+    <h1>Animal List</h1>
+    <a href="{% url 'animal_add' %}">Add New Animal</a>
+    <ul>
+        {% for animal in animals %}
+            <li>
+                <a href="{% url 'animal_detail' animal.pk %}">
+                    {{ animal.name }} ({{ animal.species }}, {{ animal.age }} years)
+                </a>
+                | <a href="{% url 'animal_edit' animal.pk %}">Edit</a>
+                | <a href="{% url 'animal_delete' animal.pk %}">Delete</a>
+            </li>
+        {% empty %}
+            <li>No animals found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ produce.name }}</title>
+</head>
+<body>
+   <h1>{{ produce.produce_type }}</h1>
+<p>Quantity: {{ produce.quantity }}</p>
+<p>Date Collected: {{ produce.date_collected }}</p>
+
+    {% if produce.animal %}
+        <p>From Animal: {{ produce.animal.name }}</p>
+    {% endif %}
+
+    <a href="{% url 'produce_edit' produce.pk %}">Edit</a> |
+    <a href="{% url 'produce_delete' produce.pk %}">Delete</a> |
+    <a href="{% url 'produce_list' %}">Back to list</a>
+</body>
+</html>

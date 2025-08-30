@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produce</title>
+</head>
+<body>
+    <h1>Produce List</h1>
+    <a href="{% url 'produce_add' %}">Add New Produce</a>
+    <ul>
+        {% for produce in produces %}
+            <li>
+                <a href="{% url 'produce_detail' produce.pk %}">
+                    {{ produce.produce_type }} (Quantity: {{ produce.quantity }})
+
+                </a>
+                {% if produce.animal %}
+                    - from {{ produce.animal.name }}
+                {% endif %}
+                | <a href="{% url 'produce_edit' produce.pk %}">Edit</a>
+                | <a href="{% url 'produce_delete' produce.pk %}">Delete</a>
+            </li>
+        {% empty %}
+            <li>No produce found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

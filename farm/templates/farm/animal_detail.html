@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ animal.name }}</title>
+</head>
+<body>
+    <h1>{{ animal.name }}</h1>
+    <p>Species: {{ animal.species }}</p>
+    <p>Age: {{ animal.age }} years</p>
+
+    <a href="{% url 'animal_edit' animal.pk %}">Edit</a> |
+    <a href="{% url 'animal_delete' animal.pk %}">Delete</a> |
+    <a href="{% url 'animal_list' %}">Back to list</a>
+</body>
+</html>
