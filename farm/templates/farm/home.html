@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Project Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #2b7a0b;
+        }
+        .links {
+            margin-top: 30px;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐄 Welcome to Farm Project 🌾</h1>
+    <p>Manage your animals and produce easily.</p>
+
+    <div class="links">
+        <a href="{% url 'add_animal' %}">➕ Add Animal</a>
+        <a href="{% url 'animal_list' %}">📋 View Animals</a>
+        <a href="{% url 'add_produce' %}">➕ Add Produce</a>
+        <a href="{% url 'produce_list' %}">📦 View Produce</a>
+    </div>
+</body>
+</html>
