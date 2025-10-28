@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$tw#0r+7i6n3w7smolxjb&063a2v4-^=*$yp_tnj9ud8nsdi#^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['capstone-project-nvoc.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1','capstone-project-nvoc.onrender.com', 'localhost']
 
 # Application definition
 
