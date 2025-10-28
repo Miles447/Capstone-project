@@ -26,13 +26,13 @@ class AnimalDetailView(DetailView):
 class AnimalCreateView(CreateView):
     model = Animal
     template_name = "farm/animal_form.html"
-    fields = ['name', 'species', 'age']
+    fields = ['name', 'breed', 'age']
     success_url = reverse_lazy("animal_list")
 
 class AnimalUpdateView(UpdateView):
     model = Animal
     template_name = "farm/animal_form.html"
-    fields = ['name', 'species', 'age']
+    fields = ['name', 'breed', 'age']
     success_url = reverse_lazy("animal_list")
 
 class AnimalDeleteView(DeleteView):

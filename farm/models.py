@@ -5,12 +5,12 @@ from django.db import models
 
 class Animal(models.Model):
     name = models.CharField(max_length=100)
-    species = models.CharField(max_length=100)
+    breed = models.CharField(max_length=100)
     age = models.PositiveIntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.name} ({self.species})"
+        return f"{self.name} ({self.breed})"
 
 
 class Produce(models.Model):

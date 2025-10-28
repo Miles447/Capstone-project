@@ -10,7 +10,7 @@
         {% for animal in animals %}
             <li>
                 <a href="{% url 'animal_detail' animal.pk %}">
-                    {{ animal.name }} ({{ animal.species }}, {{ animal.age }} years)
+                    {{ animal.name }} ({{ animal.breed }}, {{ animal.age }} years)
                 </a>
                 | <a href="{% url 'animal_edit' animal.pk %}">Edit</a>
                 | <a href="{% url 'animal_delete' animal.pk %}">Delete</a>
