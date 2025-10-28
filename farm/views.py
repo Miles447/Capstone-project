@@ -2,14 +2,16 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from.models import Animal, Produce
+from django.shortcuts import render
+from django.http import HttpResponse
+
 
 #Create your views here.
 
 #Animal views
-from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Welcome to the Farm Project!")
+    return render(request, 'farm/home.html')
 
 class AnimalListView(ListView):
     model = Animal
